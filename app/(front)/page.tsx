@@ -1,31 +1,75 @@
-import BoldHeading from "@/components/BoldHeading";
-import Image from "next/image";
-
-export default function Home() {
+import React from "react";
+import {
+  PageActions,
+  PageHeader,
+  PageHeaderDescription,
+  PageHeaderHeading,
+} from "@/components/Hero/page-header";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+export default function Hero() {
   return (
-    <main className="p-8">
-      <BoldHeading heading="How to Use Shadcn UI Like a Pro" />
-      <ul className="my-6 ml-6 list-disc [&>li]:mt-2 text-xl">
+    <div className="relative container">
+      <PageHeader>
+        <PageHeaderHeading className="hidden md:block">
+        Welcome to NAMKA
+        </PageHeaderHeading>
+        <PageHeaderHeading className="md:hidden">Examples</PageHeaderHeading>
+        <PageHeaderDescription>
+        <ul className="my-6 ml-6 list-disc [&>li]:mt-2 text-xl">
         <li>
-          Shadcn Typography - <span className="font-bold">Simple</span>
+          Watch Movies - <span className="font-bold">Simple</span>
         </li>
         <li>
-          Shadcn Darkmode - <span className="font-bold">Simple</span>
+          Listen to Music - <span className="font-bold">Simple</span>
         </li>
         <li>
-          Shadcn Components - <span className="font-bold">Simple</span>
+          Namka Courses - <span className="font-bold">Simple</span>
         </li>
         <li>
-          Shadcn Blocks - <span className="font-bold">Medium</span>
+          Play NAMKA Games - <span className="font-bold">Medium</span>
         </li>
         <li>
-          Shadcn Examples - <span className="font-bold">Advanced</span>
+          NAMKA QA Committee - <span className="font-bold">Advanced</span>
         </li>
         <li>
-          Shadcn UI Native Components -{" "}
+          NAMKA Subscriptions -{" "}
           <span className="font-bold">Advanced</span>
         </li>
       </ul>
-    </main>
+        </PageHeaderDescription>
+        <PageActions>
+          <Link href="/docs" className={cn(buttonVariants(), "rounded-[6px]")}>
+            Get Started
+          </Link>
+          <Link
+            href="/components"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "rounded-[6px]"
+            )}
+          >
+            Components
+          </Link>
+        </PageActions>
+      </PageHeader>
+    </div>
   );
 }
+
+
+
+
+// import BoldHeading from "@/components/BoldHeading";
+// import Image from "next/image";
+
+// export default function Home() {
+//   return (
+//     <main className="p-8">
+      
+//       <BoldHeading heading="Welcome to NAMKA" />
+
+//     </main>
+//   );
+// }

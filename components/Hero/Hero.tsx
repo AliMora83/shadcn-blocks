@@ -23,8 +23,8 @@ export default function Hero() {
           components. Use this as a guide to build your own.
         </PageHeaderDescription>
         <PageActions>
-          <Link href="/docs" className={cn(buttonVariants(), "rounded-[6px]")}>
-            Get Started
+          <Link href="/dashboard" className={cn(buttonVariants(), "rounded-[6px]")}>
+            Dashboard
           </Link>
           <Link
             href="/components"

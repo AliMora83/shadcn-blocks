@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "NAMKA",
+  url: "https://namka.co.za",
+  ogImage: "/nk_logo",
   description:
-    "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+    "Software Development",
   links: {
     twitter: "https://x.com/",
     github: "https://github.com/",

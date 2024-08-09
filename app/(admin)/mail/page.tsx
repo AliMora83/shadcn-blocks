@@ -10,6 +10,7 @@ export default function page() {
   const defaultLayout = layout ? JSON.parse(layout.value) : undefined;
   const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined;
 
+
   return (
     <div>
       <div className="hidden flex-col md:flex">
