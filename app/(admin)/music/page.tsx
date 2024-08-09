@@ -1,10 +1,11 @@
+
 import React from "react";
-import Courses from "@/components/Courses";
+import Music from "@/components/Music/Music";
 
 export default function page() {
   return (
     <div>
-      <Courses />
+      <Music />
     </div>
   );
 }

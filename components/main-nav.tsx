@@ -6,10 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import Dashboard from './Dashboard';
 
 export function MainNav() {
   const pathname = usePathname();

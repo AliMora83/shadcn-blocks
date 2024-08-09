@@ -1,18 +1,23 @@
+/* eslint-disable react/jsx-no-undef */
 "use client"
 
 import * as React from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 import Link from "next/link";
 import {
   Bell,
+  BookOpen,
   Home,
   LineChart,
+  Mail,
   Menu,
+  Music4,
   Package,
   Package2,
-  ShoppingCart,
   Users,
+  Video,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -36,8 +41,13 @@ export default function Sidenav() {
         <div className="flex h-full max-h-screen flex-col gap-2 justify-between">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Package2 className="h-6 w-6" />
-              <span className="">NAMKA</span>
+              <Image
+                src="/nk_logo.png"
+                alt="namka logo"
+                width={140}
+                height={140}
+                className=""
+              />
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
               <Bell className="h-4 w-4" />
@@ -52,7 +62,7 @@ export default function Sidenav() {
                   "transition-colors hover:text-foreground/80 flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground",
                   pathname?.startsWith("/dashboard")
                     ? "text-foreground bg-muted"
-                    : "text-foreground/60"
+                    : "text-muted-foreground"
                 )}
               >
                 <Home className="h-4 w-4" />
@@ -62,22 +72,24 @@ export default function Sidenav() {
                 href="/mail"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <ShoppingCart className="h-4 w-4" />
+                <Mail className="h-4 w-4" />
                 Mail
                 <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                   6
                 </Badge>
               </Link>
+
+              {/* TODO - Add all links  */}
               <Link
                 href="/courses"
                 className={cn(
                   "transition-colors hover:text-foreground/80 flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground",
                   pathname?.startsWith("/courses")
                     ? "text-foreground bg-muted"
-                    : "text-foreground/60"
+                    : "text-muted-foreground"
                 )}
               >
-                <Home className="h-4 w-4" />
+                <BookOpen className="h-4 w-4" />
                 Courses
               </Link>
 
@@ -85,14 +97,14 @@ export default function Sidenav() {
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <Users className="h-4 w-4" />
-                Watch Moveis
+                <Video className="h-4 w-4" />
+                Watch Movies
               </Link>
               <Link
-                href="#"
+                href="/music"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <LineChart className="h-4 w-4" />
+                <Music4 className="h-4 w-4" />
                 Listen to Music
               </Link>
             </nav>

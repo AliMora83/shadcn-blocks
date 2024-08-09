@@ -33,6 +33,8 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Sidenav from "./Admin/sidenav";
 import { ModeToggle } from "./ModeToggle";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 
 export default function Dashboard() {
   return (
@@ -129,11 +131,16 @@ export default function Dashboard() {
               </div>
             </form>
           </div>
-     
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
                 <CircleUser className="h-5 w-5" />
+                <Avatar>
+                  <AvatarImage src="/nk_fav.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
